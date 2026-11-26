@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["hour"],
+  "properties": {
+    "hour": {"type": "string"},
+    "hr_avg": {"type": "number"},
+    "hr_min": {"type": "number"},
+    "hrv_avg": {"type": "number"},
+    "spo2_avg": {"type": "number"},
+    "temp_avg": {"type": "number"},
+    "steps": {"type": "number"}
+  },
+  "x-index": ["hour"]
+}

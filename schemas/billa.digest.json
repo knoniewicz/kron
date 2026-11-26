@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["week", "year", "text", "at"],
+  "properties": {
+    "week": {"type": "integer"},
+    "year": {"type": "integer"},
+    "valid_from": {"type": "string"},
+    "valid_to": {"type": "string"},
+    "text": {"type": "string"},
+    "model": {"type": "string"},
+    "prompt_version": {"type": "string"},
+    "at": {"type": "string"}
+  },
+  "x-index": ["at"]
+}

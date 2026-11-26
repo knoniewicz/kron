@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["date"],
+  "properties": {
+    "date": {"type": "string"},
+    "hr_avg": {"type": "number"},
+    "hr_min": {"type": "number"},
+    "hrv_avg": {"type": "number"},
+    "spo2_avg": {"type": "number"},
+    "steps": {"type": "number"},
+    "sleep_deep": {"type": "number"},
+    "sleep_rem": {"type": "number"},
+    "sleep_light": {"type": "number"},
+    "sleep_awake": {"type": "number"},
+    "samples": {"type": "integer"}
+  },
+  "x-index": ["date"]
+}

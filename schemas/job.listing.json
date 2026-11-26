@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["title", "company", "url"],
+  "properties": {
+    "title": {"type": "string"},
+    "company": {"type": "string"},
+    "url": {"type": "string"},
+    "location": {"type": "string"},
+    "remote": {"type": ["boolean", "string"]},
+    "salary_text": {"type": "string"},
+    "description": {"type": "string"},
+    "posted": {"type": "string"},
+    "board": {"type": "string"}
+  },
+  "x-index": ["company", "board", "posted"]
+}

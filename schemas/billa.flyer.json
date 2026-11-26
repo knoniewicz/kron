@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["week", "year", "valid_from", "valid_to", "url"],
+  "properties": {
+    "week": {"type": "integer"},
+    "year": {"type": "integer"},
+    "valid_from": {"type": "string"},
+    "valid_to": {"type": "string"},
+    "url": {"type": "string"},
+    "plus_url": {"type": "string"},
+    "region": {"type": "string"},
+    "current": {"type": "boolean"},
+    "page": {"type": "string"}
+  },
+  "x-index": ["valid_from"]
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["name", "layer", "role", "state", "where"],
+  "properties": {
+    "name": {"type": "string"},
+    "layer": {"enum": ["core", "data", "when", "handlers", "bridge", "ui", "memory", "apps", "other", "legacy"]},
+    "role": {"type": "string"},
+    "where": {"type": "string"},
+    "unit": {"type": "string"},
+    "state": {"enum": ["ok", "warn", "down"]},
+    "detail": {"type": "string"},
+    "handlers": {"type": "number"},
+    "repo": {"type": "string"}
+  },
+  "x-index": ["layer", "state"]
+}

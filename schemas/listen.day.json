@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["date", "minutes"],
+  "properties": {
+    "date": {"type": "string"},
+    "minutes": {"type": "number"},
+    "listens": {"type": "integer"},
+    "tracks": {"type": "integer"},
+    "artists": {"type": "integer"}
+  },
+  "x-index": ["date"]
+}

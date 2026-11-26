@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["name", "kind", "started", "duration_ms", "ok"],
+  "properties": {
+    "name": {"type": "string"},
+    "kind": {"enum": ["connector", "automation"]},
+    "started": {"type": "string"},
+    "duration_ms": {"type": "integer", "minimum": 0},
+    "ok": {"type": "boolean"},
+    "error": {"type": "string"}
+  },
+  "x-index": ["name", "ok"]
+}

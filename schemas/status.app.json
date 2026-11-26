@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["group", "name", "status", "summary", "rows"],
+  "properties": {
+    "group": {"type": "string"},
+    "name": {"type": "string"},
+    "status": {"enum": ["ok", "warn", "down"]},
+    "summary": {"type": "string"},
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {"type": ["string", "number"]}
+      }
+    }
+  },
+  "x-index": ["group", "status"]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["listing_id", "score", "why", "model", "prompt_version"],
+  "properties": {
+    "listing_id": {"type": "string"},
+    "score": {"type": "integer", "minimum": 1, "maximum": 10},
+    "why": {"type": "string"},
+    "model": {"type": "string"},
+    "prompt_version": {"type": "string"}
+  },
+  "x-index": ["listing_id", "score"]
+}

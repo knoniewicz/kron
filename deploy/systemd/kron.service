@@ -1,0 +1,22 @@
+[Unit]
+Description=kron (Lua connectors and automations on Kor)
+Requires=kor-daemon.service korpus.service
+After=kor-daemon.service korpus.service
+PartOf=kor-daemon.service
+
+[Service]
+# Directory with your own connectors/ and automations/.
+Environment=KRON_DIR=%h/.config/kron/lua
+# KEY=VALUE secrets for your Lua jobs; keep it 0600 and out of git.
+EnvironmentFile=-%h/.config/kor/kron.env
+# Names from that file Lua may read through ctx.env.
+#Environment=KRON_ENV_ALLOW=EXAMPLE_URL,EXAMPLE_TOKEN
+# Optional decision model for kron.decision.evaluate; nothing depends on it.
+#Environment=KRON_DECIDER_URL=http://127.0.0.1:8890
+ExecStart=%h/.local/bin/kron
+ExecReload=/bin/sh -c 'kill -HUP $MAINPID'
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=korpus (SQLite store on Kor)
+Requires=kor-daemon.service
+After=kor-daemon.service
+PartOf=kor-daemon.service
+
+[Service]
+Environment=KORPUS_DB=%h/.local/share/korpus/korpus.db
+Environment=KORPUS_HTTP=127.0.0.1:8897
+ExecStart=%h/.local/bin/korpus
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target

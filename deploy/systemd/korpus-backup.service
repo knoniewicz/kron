@@ -1,0 +1,7 @@
+[Unit]
+Description=korpus nightly backup
+
+[Service]
+Type=oneshot
+Environment=KORPUS_DB=%h/.local/share/korpus/korpus.db
+ExecStart=/bin/sh -c 'd=%h/.local/share/korpus-backups; %h/.local/bin/korpus backup "$d/korpus-$(date +%%F).db" && ls -1t "$d"/korpus-*.db | tail -n +15 | xargs -r rm --'

@@ -1,0 +1,7 @@
+/kron
+__pycache__/
+*.pyc
+bin/
+# your own jobs: live in -dir (default ./lua), never committed here
+/lua/connectors/
+/lua/automations/

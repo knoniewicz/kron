@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "kind",
+    "title",
+    "at"
+  ],
+  "properties": {
+    "kind": {
+      "enum": [
+        "done",
+        "heads_up",
+        "attention",
+        "digest"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "at": {
+      "type": "string"
+    },
+    "urgent": {
+      "type": "boolean"
+    }
+  },
+  "x-index": [
+    "at"
+  ]
+}
